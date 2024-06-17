@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Shopping List</h1>
+        </header>
+        <main>
+            <form id="productForm" class="form">
+                <input type="text" id="name" placeholder="Product name" required>
+                <input type="number" id="quantity" placeholder="Quantity" required>
+                <input type="number" id="price" placeholder="Price" step="0.01" required>
+                <input type="text" id="comment" placeholder="Comment">
+                <input type="submit" value="Add Product">
+            </form>
+            <div class="table-container">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Comment</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="productList">
+                        <!-- Products will be dynamically added here -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="total-price-container">
+                <p id="totalPrice">Total Price: 0.00</p>
+            </div>
+        </main>
+    </div>
+    <script src="static/script.js"></script>
+</body>
+</html>
